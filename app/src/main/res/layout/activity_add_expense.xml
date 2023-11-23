@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fields for expense entry -->
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Amount"
+        android:inputType="numberDecimal"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:layout_below="@id/editTextNumber"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tag (Optional)"
+        android:layout_below="@id/editTextDescription"
+        android:layout_margin="16dp"/>
+
+    <!-- Button to add expense -->
+    <Button
+        android:id="@+id/buttonAddExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Expense"
+        android:layout_below="@id/editTextTag"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- TableLayout to display expenses -->
+    <TableLayout
+        android:id="@+id/tableLayoutExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAddExpense"
+        android:layout_marginTop="16dp">
+        <!-- This is an empty TableLayout where expenses will be added dynamically -->
+    </TableLayout>
+
+</RelativeLayout>
